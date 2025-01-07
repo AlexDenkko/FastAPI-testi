@@ -9,13 +9,13 @@
 <body>
     <h1>Autotalli.bilar</h1>
     <div class="item-cards">
-        {% for item in items %}
+        {% for car in cars %}
             <div class="card">
-                <h2>{{item.mark }}</h2>
-                <p class="model">{{ item.model }}</p>
-                <span>{{ item.yearModel }},</span>
-                <span>{{ item.mileage }}km</span>
-                <p>{{ item.description }}</p>
+                <h2>{{car.mark }}</h2>
+                <p class="model">{{ car.model }}</p>
+                <span>{{ car.yearModel }},</span>
+                <span>{{ car.mileage }}km</span>
+                <p>{{ car.description }}</p>
             </div>
         {% endfor %}
     </div>
