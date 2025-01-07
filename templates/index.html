@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastApi Demo</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Autotalli.bilar</h1>
+    <div class="item-cards">
+        {% for item in items %}
+            <div class="card">
+                <h2>{{item.mark }}</h2>
+                <p class="model">{{ item.model }}</p>
+                <span>{{ item.yearModel }},</span>
+                <span>{{ item.mileage }}km</span>
+                <p>{{ item.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

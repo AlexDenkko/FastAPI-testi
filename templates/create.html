@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Listing</title>
+    <link href="{{ url_for('static', path='/create.css') }}" rel="stylesheet">
+    
+</head>
+<body>
+    <form method="post" action="/cars/create">
+        <!-- { "id", "mark", "model", "description", "yearModel", "mileage" } -->
+        <label>
+            Id
+            <input type="text" name="id" placeholder="123456">
+        </label>
+        <label>
+            Mark
+            <input type="text" name="mark" placeholder="Toyota">
+        </label>
+        <label>
+            Model
+            <input type="text" name="model" placeholder="Yaris">
+        </label>
+        <label>
+            Mileage
+            <input type="number" name="mileage" placeholder="123456">
+        </label>
+        <label>
+            Year model
+            <input type="number" name="yearModel" placeholder="2010">
+        </label>
+        <label>
+            Description
+            <input type="text" name="description" placeholder="Economic and compact japanese car">
+        </label>
+        <button type="submit">Create car listing</button>
+    </form>
+</body>
+</html>
